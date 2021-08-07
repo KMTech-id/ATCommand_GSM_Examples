@@ -27,7 +27,7 @@ AT+QISEND=0
 POST /update.json HTTP/1.1
 Host: api.thingspeak.com
 Content-Type: application/json
-Content-Length: 42
+Content-Length: 42				
 
 note: Conten Length diisi sesuai (jumlah karakter body - 1)
 		
