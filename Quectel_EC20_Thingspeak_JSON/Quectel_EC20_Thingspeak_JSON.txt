@@ -1,0 +1,46 @@
+AT+CFUN=1
+*----------Send ASCII----------*
+
+AT+CGATT=1
+*----------Send ASCII----------*
+
+AT+QICSGP=1,1,"APN","","",1
+note: APN diganti sesuai SIM yang digunakan
+telkomsel iot : m2minternet
+*----------Send ASCII----------*
+
+AT+QIACT=1
+*----------Send ASCII----------*
+
+AT+QIACT?
+*----------Send ASCII----------*
+
+AT+QIOPEN=1,0,"TCP","api.thingspeak.com",80,0,1  
+*----------Send ASCII----------*
+
+AT+QISTATE=1,0
+*----------Send ASCII----------*
+
+AT+QISEND=0
+*----------Send ASCII----------*
+
+POST /update.json HTTP/1.1
+Host: api.thingspeak.com
+Content-Type: application/json
+Content-Length: 42
+
+note: Conten Length diisi sesuai (jumlah karakter body - 1)
+		
+*----------Send ASCII----------*
+*----------Send ASCII----------*
+
+{"api_key":"KVDJ9TSA14Y9RL37","field1":27}
+note : body
+*----------Send ASCII----------*
+
+0X1A 
+*----------Send Number----------*
+
+AT+QICLOSE=1
+AT+QIDEACT=1
+AT+QPOWD
