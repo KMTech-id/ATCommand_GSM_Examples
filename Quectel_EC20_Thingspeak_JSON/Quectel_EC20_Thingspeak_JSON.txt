@@ -34,7 +34,7 @@ note: Conten Length diisi sesuai (jumlah karakter body - 1)
 *----------Send ASCII----------*
 *----------Send ASCII----------*
 
-{"api_key":"KVDJ9TSA14Y9RL37","field1":27}
+{"api_key":"XXXXXXXXXXXXXXXX","field1":27}
 note : body
 *----------Send ASCII----------*
 
